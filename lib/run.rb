@@ -1,6 +1,6 @@
 # -- gems
 require 'rubygems'
-require 'test_runner' # https://github.com/appium/test_runner
+require 'selenium-webdriver'
 require 'spec' # https://github.com/bootstraponline/spec
 # --
 

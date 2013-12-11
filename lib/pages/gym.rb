@@ -1,6 +1,10 @@
 module Pages
   module Gym # Pages::Gym
     class << self
+      def gym
+        self # nop for RubyMine
+      end
+
       def home
         $driver.get 'http://www.thegymnasium.com/'
         self
