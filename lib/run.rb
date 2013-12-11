@@ -52,6 +52,23 @@ end
 # load test
 require_relative 'spec/gym'
 
-# run test
 Minitest.after_run { $driver.quit if $driver }
-Minitest.run_specs
+
+def run_tests
+  # run test
+  trace_files = []
+
+  base_path = File.dirname(__FILE__)
+  spec_path = File.join(base_path, 'spec/**/*.rb')
+  pages_path = File.join(base_path, 'pages/**/*.rb')
+  Dir.glob(spec_path) do |f|
+    trace_files << File.expand_path(f)
+  end
+  Dir.glob(pages_path) do |f|
+    trace_files << File.expand_path(f)
+  end
+
+  Minitest.run_specs ({trace: trace_files})
+end
+
+run_tests
