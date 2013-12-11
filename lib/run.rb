@@ -4,7 +4,7 @@ require 'test_runner' # https://github.com/appium/test_runner
 require 'spec' # https://github.com/bootstraponline/spec
 # --
 
-# It seems $browser must be global.
+# It seems $driver must be global.
 $driver = Selenium::WebDriver.for :firefox
 $driver.manage.timeouts.implicit_wait = 30 # seconds
 

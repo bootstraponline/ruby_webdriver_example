@@ -1,5 +1,5 @@
 module Pages
-  module Gym
+  module Gym # Pages::Gym
     class << self
       def home
         $driver.get 'http://www.thegymnasium.com/'
