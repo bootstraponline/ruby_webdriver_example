@@ -1,9 +1,9 @@
 module Pages
   module Gym # Pages::Gym
     class << self
-      def gym
-        self # nop for RubyMine
-      end
+      # RubyMine can't detect the injected method unless we do this.
+      def gym; end
+      remove_method :gym
 
       def home
         $driver.get 'http://www.thegymnasium.com/'
