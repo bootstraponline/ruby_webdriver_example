@@ -55,7 +55,7 @@ module Pages
         self
       end
 
-      def enter_invalid_sign_in_details
+      def invalid_sign_in
         id('user_name').clear
         id('user_name').send_keys 'some invalid username'
         css('#loginfrm > fieldset > div.col > #user_pass').send_keys 'password'
@@ -74,7 +74,7 @@ module Pages
         self
       end
 
-      def enter_invalid_sign_up_details
+      def invalid_sign_up
         css('#first_name').click
         css('#first_name').clear
         css('#first_name').send_keys 'firstName'
