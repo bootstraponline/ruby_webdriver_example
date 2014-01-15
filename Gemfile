@@ -2,4 +2,5 @@
 source 'https://rubygems.org'
 
 gem 'spec', '~> 5.0.19'
-gem 'selenium-webdriver', '~> 2.38.0'
+gem 'selenium-webdriver', '~> 2.39.0'
+gem 'page-object', '~> 0.9.4'
