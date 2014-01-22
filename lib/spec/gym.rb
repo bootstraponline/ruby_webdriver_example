@@ -1,3 +1,5 @@
+require_relative '../pages/gym_stub'
+
 describe 'gymnasium tests' do
   t 'verify homepage exists' do
     gym.goto
