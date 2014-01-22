@@ -1,2 +1,3 @@
 - spec assertions shouldn't end the test. instead an error should be raised.
+  - See https://github.com/appium/ruby_lib/issues/109
 - fix type ahead for page-object
