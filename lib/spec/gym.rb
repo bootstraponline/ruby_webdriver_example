@@ -4,10 +4,8 @@ describe 'gymnasium tests' do
     gym.sign_in
     gym.user_name = 'example user' # type text into textfield
 
-    # check that the text matches what we just entered
-    raise unless gym.user_name_element.value == 'example user'
-    # check that the element exists
-    raise unless gym.user_name?
+    gym.user_name_element.value.must_equal 'example user' # verify value
+    gym.user_name?.must_equal true # verify existence
 
     gym.password = 'password'
     gym.submit_sign_in
